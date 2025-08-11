@@ -1,58 +1,78 @@
-import random, sys
 
-print('ROCK, PAPER, SCISSORS')
-# These variables keep track of the number of wins, losses, and ties.
-wins = 0
-losses = 0
-ties = 0
-while True: # The main game loop.
-    print('%s Wins, %s Losses, %s Ties' % (wins, losses, ties))
-    while True: # The player input loop.
-        print('Enter your move: (r)ock (p)aper (s)cissors or (q)uit')
-        playerMove = input()
-        if playerMove == 'q':
-            sys.exit() # Quit the program.
-        if playerMove == 'r' or playerMove == 'p' or playerMove == 's':
-            break # Break out of the player input loop.
-        print('Type one of r, p, s, or q.')
-    # Display what the player chose:
-    if playerMove == 'r':
-        print('ROCK versus...')
-    elif playerMove == 'p':
-        print('PAPER versus...')
-    elif playerMove == 's':
-        print('SCISSORS versus...')
-    # Display what the computer chose:
-    randomNumber = random.randint(1, 3)
-    if randomNumber == 1:
-        computerMove = 'r'
-        print('ROCK')
-    elif randomNumber == 2:
-        computerMove = 'p'
-        print('PAPER')
-    elif randomNumber == 3:
-        computerMove = 's'
-        print('SCISSORS')
-    # Display and record the win/loss/tie:
-    if playerMove == computerMove:
-        print('It is a tie!')
-        ties = ties + 1
-    elif playerMove == 'r' and computerMove == 's':
-        print('You win!')
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Portal|UPSA</title>
+        <style>
+            .main{
+                border: 5px solid white;
+                border-radius: 3px;
+                background-color: white;
+                height: 420px;
+                width:370px;
+                margin-top:70px; 
+                margin-left: 450px;
+            }
+            #lord1{
+                margin-left: 30px;
+            }
+        
+            #lord2{
+                border: 1px solid lightgrey;
+                margin-left: 5px;
+                padding: 10px;
+                padding-right: 176px;
+                border-top: none;
+                border-left: none;
+                border-right:none;
+            }
+            
+            #lord3{
+            background-color:darkblue;
+                color: white;
+                font-size: 16px;
+              margin-left: 25px; 
+                padding: 11px;
+              padding-right: 140px;
+                padding-left: 140px;
+                border: none;
+                border-radius: 5px;
+            }
+            
+            #lord4{
+                color: darkblue;
+                margin-left: 30px;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    
+    
+    <body style="background-image: url('UPSA-Image-960x423.jpg'); background-size: cover; background-position:centre;">
+    <form>
+        <div class="main">
+            <div class="first">
+                <img id="lord1" src="upsa-logo-new.png">
+                
+                <br>
+                <h2 style="margin-left: 45px;">Welcome to UPSA Student<br><span style="margin-left: 100px;"> Portal</span></h2>
+                
+                <br>
+                <input id="lord2" type="tel" placeholder="Index Number">
+                
+                <br><br>
+                <input id="lord2" type="password" placeholder="Password">
+            
+                <br><br>
+                <button id="lord3">Login</button>
+                
 
-        wins = wins + 1
-    elif playerMove == 'p' and computerMove == 'r':
-        print('You win!')
-        wins = wins + 1
-    elif playerMove == 's' and computerMove == 'p':
-        print('You win!')
-        wins = wins + 1
-    elif playerMove == 'r' and computerMove == 'p':
-        print('You lose!')
-        losses = losses + 1
-    elif playerMove == 'p' and computerMove == 's':
-        print('You lose!')
-        losses = losses + 1
-    elif playerMove == 's' and computerMove == 'r':
-        print('You lose!')
-        losses = losses + 1
+        <br><br>
+        <a id="lord4" href="ndn.html">Forgot Password?</a>
+        
+            </div>
+        </div>
+        </form>
+        
+    </body>
+</html>
